@@ -7,6 +7,7 @@ public class GroundCheck : MonoBehaviour
 
     public Player player;
     public movingplat mov;
+    public movingupdown mov1;
 
     public Vector3 movep;
 
@@ -14,6 +15,7 @@ public class GroundCheck : MonoBehaviour
     void Start()
     {
         mov = GameObject.FindGameObjectWithTag("Movingplat").GetComponent<movingplat>();
+        mov1 = GameObject.FindGameObjectWithTag("Movingup").GetComponent<movingupdown>();
         player = gameObject.GetComponentInParent<Player>();
     }
 
@@ -32,6 +34,12 @@ public class GroundCheck : MonoBehaviour
         {
             movep = player.transform.position;
             movep.x += mov.speed * 1.3f;
+            player.transform.position = movep;
+        }
+        if (collision.isTrigger == false && collision.CompareTag("Movingup"))
+        {
+            movep = player.transform.position;
+            movep.y += mov1.speed * 1.3f;
             player.transform.position = movep;
         }
 

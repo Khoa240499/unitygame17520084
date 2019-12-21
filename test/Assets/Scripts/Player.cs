@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D r2;
     public Animator anim;
-    public float h = 0;
+    public float h = 2;
     public bool jump = false;
 
     // Use this for initialization
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         anim.SetBool("grounded", grounded);
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
 
-        if (jump == true)
+        if ((jump == true)||(Input.GetKeyDown(KeyCode.Space)))
         {
             if (grounded)
             {
@@ -69,7 +69,9 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Move(h);        
+        Move(h);
+
+        //float h = Input.GetAxis("Horizontal");
         r2.AddForce((Vector2.right) * speed * h);
 
         if (r2.velocity.x > maxspeed)

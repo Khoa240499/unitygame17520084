@@ -24,7 +24,7 @@ public class playerattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attack == true && !attacking)
+        if (((attack == true)||(Input.GetKeyDown(KeyCode.Z))) && !attacking)
         {
             attacking = true;
             trigger.enabled = true;
