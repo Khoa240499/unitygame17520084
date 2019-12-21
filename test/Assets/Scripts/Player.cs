@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 
-    public float speed = 100f, maxspeed = 4, maxjump = 100, jumpPow = 300f;
+    public float speed = 100f, maxspeed = 4, maxjump = 4, jumpPow = 300f;
     public bool grounded = true, faceright = true, doublejump = false;
 
     public int ourHealth;
@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D r2;
     public Animator anim;
+    public float h = 0;
+    public bool jump = false;
 
     // Use this for initialization
     void Start()
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
         anim.SetBool("grounded", grounded);
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (jump == true)
         {
             if (grounded)
             {
@@ -37,27 +39,37 @@ public class Player : MonoBehaviour
                 r2.AddForce(Vector2.up * jumpPow);
 
             }
-
             else
             {
-                if (doublejump)
-                {
-                    doublejump = false;
-                    r2.velocity = new Vector2(r2.velocity.x, 0);
-                    r2.AddForce(Vector2.up * jumpPow * 0.7f);
-
-                }
+                StartCoroutine(Djump());
             }
-
-
-
 
         }
     }
 
+    public IEnumerator Djump()
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (doublejump && jump == true)
+        {
+            doublejump = false;
+            r2.velocity = new Vector2(r2.velocity.x, 0);
+            r2.AddForce(Vector2.up * jumpPow);
+
+        }
+
+    }
+    public void Jumping(bool Bjump)
+    {
+        jump = Bjump;
+    }
+    public void Move(float Binput)
+    {
+        h = Binput;
+    }
     void FixedUpdate()
     {
-        float h = Input.GetAxis("Horizontal");
+        Move(h);        
         r2.AddForce((Vector2.right) * speed * h);
 
         if (r2.velocity.x > maxspeed)
@@ -92,6 +104,7 @@ public class Player : MonoBehaviour
             Death();
         }
     }
+
 
     public void Flip()
     {

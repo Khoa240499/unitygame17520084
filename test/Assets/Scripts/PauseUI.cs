@@ -5,21 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class PauseUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public bool pause = false;
     public GameObject pauseUI;
+    // Start is called before the first frame update
+    public bool pause = false, Bpause=false;
+    
 
     // Use this for initialization
     void Start()
     {
         pauseUI.SetActive(false);
     }
-
+   
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Bpause==true && pause==false)
         {
             pause = !pause;
 
@@ -38,6 +39,10 @@ public class PauseUI : MonoBehaviour
         }
 
 
+    }
+    public void bpause(bool x)
+    {
+        Bpause = x;
     }
     public void resume()
     {

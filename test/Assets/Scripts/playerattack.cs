@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerattack : MonoBehaviour
 {
     public float attackdelay = 0.3f;
-    public bool attacking = false;
+    public bool attacking = false,attack=false;
 
     public Animator anim;
 
@@ -17,11 +17,14 @@ public class playerattack : MonoBehaviour
         trigger.enabled = false;
     }
 
-
+    public void Attack(bool Battack)
+    {
+        attack = Battack;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !attacking)
+        if (attack == true && !attacking)
         {
             attacking = true;
             trigger.enabled = true;
