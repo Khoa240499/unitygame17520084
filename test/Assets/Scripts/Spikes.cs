@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    public Player player;
+        public Player player;
+    public int Damage = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class Spikes : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            player.Damage(1);
+            player.Damage(Damage);
             player.Knockback(400f, player.transform.position);
         }
     }

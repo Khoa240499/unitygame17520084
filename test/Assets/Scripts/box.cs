@@ -11,6 +11,7 @@ public class box : MonoBehaviour
     {
         if (Health <= 0)
         {
+            gameObject.GetComponent<Animation>().Play("destroy");
             Destroy(gameObject);
         }
     }

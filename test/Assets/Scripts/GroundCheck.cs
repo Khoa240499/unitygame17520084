@@ -6,31 +6,40 @@ public class GroundCheck : MonoBehaviour
 {
 
     public Player player;
+    public movingplat mov;
+
+    public Vector3 movep;
 
     // Use this for initialization
     void Start()
     {
+        mov = GameObject.FindGameObjectWithTag("Movingplat").GetComponent<movingplat>();
         player = gameObject.GetComponentInParent<Player>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        player.grounded = true;
+        if (collision.isTrigger == false)
+            player.grounded = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        player.grounded = true;
+        //if (collision.isTrigger == false || collision.CompareTag("water"))
+        //    player.grounded = true;
+        if (collision.isTrigger == false && collision.CompareTag("Movingplat"))
+        {
+            movep = player.transform.position;
+            movep.x += mov.speed * 1.3f;
+            player.transform.position = movep;
+        }
+
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        player.grounded = false;
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.isTrigger == false || collision.CompareTag("water"))
+    //        player.grounded = false;
+    //}
 }
