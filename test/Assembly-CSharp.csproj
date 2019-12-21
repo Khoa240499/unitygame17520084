@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Fallingflat.cs" />
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\HeartUI.cs" />
+    <Compile Include="Assets\Scripts\movingenemy.cs" />
     <Compile Include="Assets\Scripts\movingplat.cs" />
     <Compile Include="Assets\Scripts\PauseUI.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
