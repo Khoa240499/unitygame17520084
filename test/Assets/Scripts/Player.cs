@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D r2;
     public Animator anim;
-    public float h = 2;
+    public float h = 0;
     public bool jump = false;
 
     // Use this for initialization

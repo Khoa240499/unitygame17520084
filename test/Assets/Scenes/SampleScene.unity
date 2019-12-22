@@ -3006,7 +3006,7 @@ MonoBehaviour:
   maxhealth: 5
   r2: {fileID: 0}
   anim: {fileID: 0}
-  h: 2
+  h: 0
   jump: 0
 --- !u!50 &1204725713
 Rigidbody2D:
