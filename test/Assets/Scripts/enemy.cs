@@ -18,6 +18,6 @@ public class enemy : MonoBehaviour
     void Damage(int damage)
     {
         Health -= damage;
-        
+        gameObject.GetComponent<Animation>().Play("redflash");
     }
 }

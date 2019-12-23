@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Admin/Desktop/unitygame17520084-master/unitygame17520084-master/test1/testttt.apk
+C:/Users/Khoa/Desktop/test/testttt.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
