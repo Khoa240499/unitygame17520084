@@ -5,8 +5,8 @@ using UnityEngine;
 public class movingplat : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 0.05f, changeDirection = -1;
-    Vector3 Move;
+    public float speed = 0.05f, changeDirection = -1,max = 10;
+    Vector3 Move,Mid;
 
     public PauseUI pausep;
 
@@ -14,7 +14,7 @@ public class movingplat : MonoBehaviour
     void Start()
     {
         Move = this.transform.position;
-
+        Mid = this.transform.position;
         pausep = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInParent<PauseUI>();
     }
 
@@ -28,22 +28,24 @@ public class movingplat : MonoBehaviour
         }
         if (pausep.pause == false)
         {
-            Move.x += speed;
+            if (Move.x < Mid.x + max && Move.x > Mid.x - max)
+            {
+                Move.x += speed;
+            }
+            if (Move.x > Mid.x + max || Move.x < Mid.x - max)
+            {
+                speed *= changeDirection;
+                Move.x += speed;
+                
+            }
+
             this.transform.position = Move;
         }
 
 
 
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.collider.CompareTag("ground"))
-        {
-            speed *= changeDirection;
-        }
-
-
 
     }
+
+    
 }

@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     public float h = 0;
     public bool jump = false;
     public gamemaster gm;
-
     // Use this for initialization
     void Start()
     {
@@ -51,21 +50,21 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (jump == true)
-        {
-            if (grounded)
-            {
-                grounded = false;
-                doublejump = true;
-                r2.AddForce(Vector2.up * jumpPow);
+        //if (jump == true)
+        //{
+        //    if (grounded)
+        //    {
+        //        grounded = false;
+        //        doublejump = true;
+        //        r2.AddForce(Vector2.up * jumpPow);
 
-            }
-            else
-            {
-                StartCoroutine(Djump());
-            }
+        //    }
+        //    else
+        //    {
+        //        StartCoroutine(Djump());
+        //    }
 
-        }
+        //}
     }
 
     public IEnumerator Djump()

@@ -33,7 +33,7 @@ public class GroundCheck : MonoBehaviour
         if (collision.isTrigger == false && collision.CompareTag("Movingplat"))
         {
             movep = player.transform.position;
-            movep.x += mov.speed * 1.3f;
+            movep.x += mov.speed * 1.2f;
             player.transform.position = movep;
         }
         if (collision.isTrigger == false && collision.CompareTag("Movingup"))
