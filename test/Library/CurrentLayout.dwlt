@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1350
     height: 619
-  m_MinSize: {x: 679, y: 498}
-  m_MaxSize: {x: 14002, y: 14048}
+  m_MinSize: {x: 683, y: 498}
+  m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 51
+  controlID: 53
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 619
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -152,7 +152,7 @@ MonoBehaviour:
     y: 0
     width: 1350
     height: 669
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -218,10 +218,10 @@ MonoBehaviour:
     y: 0
     width: 1073
     height: 619
-  m_MinSize: {x: 404, y: 498}
+  m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 52
+  controlID: 54
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,10 +243,10 @@ MonoBehaviour:
     y: 0
     width: 1073
     height: 345
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 53
+  controlID: 55
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 756
     height: 345
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -462,20 +462,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Graphics
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Graphics
+  - Assets
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Khoa\Desktop\test
+  m_LastProjectPath: C:\Users\Admin\Documents\GitHub\unitygame17520084\test
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 702d0000
-    m_LastClickedID: 11632
-    m_ExpandedIDs: 000000002a2d000000ca9a3b
+    m_SelectedIDs: c02d0000
+    m_LastClickedID: 11712
+    m_ExpandedIDs: 00000000c02d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002a2d0000
+    m_ExpandedIDs: 00000000c02d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,8 +528,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b8300000
-    m_LastClickedInstanceID: 12472
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 7c260000ce3f0000982600006c310000523100009e2600003a460000444700008c2d0000402e0000
     m_RenameOverlay:
@@ -657,14 +657,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Khoa\Desktop\test
+  m_LastProjectPath: C:\Users\Admin\Documents\GitHub\unitygame17520084\test
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d62d0000
-    m_LastClickedID: 11734
-    m_ExpandedIDs: 000000002a2d000000ca9a3b
+    m_SelectedIDs: 682e0000
+    m_LastClickedID: 11880
+    m_ExpandedIDs: 00000000c02d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,7 +692,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002a2d0000
+    m_ExpandedIDs: 00000000c02d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d0370000563c0000564200004a450000f841000068380000ac3b0000884200004e3e0000403000007c2600006c220000a046000098260000523100003a460000444700008c2d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -810,24 +810,24 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 288}
-      m_SelectedIDs: a6a80000
-      m_LastClickedID: 43174
-      m_ExpandedIDs: 66bcffff82bcffff9abcffff9cbcffff0cd3ffff28d3ffff40d3ffff42d3ffff46d5ffff62d5ffff7ad5ffff7cd5ffff58d7ffff74d7ffff8cd7ffff8ed7ffffecd9ffff08daffff20daffff4adbffff60dbffff48dcffff64dcffff7cdcffff7edcffff50e5ffff6ce5ffff84e5ffffb2e6ffff60f6ffffecf6ffff203200002c32000048330000685e0000745e0000925f000098810000a4810000c28200006e8a00008c8b00003893000056940000f69b0000029c0000209d00003aa90000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 62220000
+      m_LastClickedID: 0
+      m_ExpandedIDs: daf6ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: box
-        m_OriginalName: box
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 43200
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
