@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         anim.SetBool("grounded", grounded);
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
 
-        if ((jump == true)||(Input.GetKeyDown(KeyCode.Space)))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (grounded)
             {
@@ -41,16 +41,35 @@ public class Player : MonoBehaviour
             }
             else
             {
-                StartCoroutine(Djump());
+                if (doublejump)
+                {
+                    doublejump = false;
+                    r2.velocity = new Vector2(r2.velocity.x, 0);
+                    r2.AddForce(Vector2.up * jumpPow*0.7f);
+                }
             }
-
         }
+        //if (jump == true)
+        //{
+        //    if (grounded)
+        //    {
+        //        grounded = false;
+        //        doublejump = true;
+        //        r2.AddForce(Vector2.up * jumpPow);
+
+        //    }
+        //    else
+        //    {
+        //        StartCoroutine(Djump());
+        //    }
+
+        //}
     }
 
     public IEnumerator Djump()
     {
         yield return new WaitForSeconds(0.5f);
-        if (doublejump && jump == true)
+        if (doublejump && (jump == true) )
         {
             doublejump = false;
             r2.velocity = new Vector2(r2.velocity.x, 0);
@@ -69,9 +88,9 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Move(h);
+        //Move(h);
 
-        //float h = Input.GetAxis("Horizontal");
+        float h = Input.GetAxis("Horizontal");
         r2.AddForce((Vector2.right) * speed * h);
 
         if (r2.velocity.x > maxspeed)
