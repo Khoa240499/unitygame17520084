@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public float h = 0;
     public bool jump = false;
     public gamemaster gm;
+    public PauseUI endUI;
     // Use this for initialization
     void Start()
     {
@@ -50,6 +51,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        ///////////////
         //if (jump == true)
         //{
         //    if (grounded)
@@ -140,6 +142,7 @@ public class Player : MonoBehaviour
     public void Death()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void Damage(int damage)
@@ -163,5 +166,11 @@ public class Player : MonoBehaviour
             Destroy(col.gameObject);
             gm.points += 1;
         }
+        if (col.CompareTag("end"))
+        {
+            SceneManager.LoadScene(1);
+        }
+
     }
+   
 }

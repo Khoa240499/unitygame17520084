@@ -19,5 +19,6 @@ public class gamemaster : MonoBehaviour
     void Update()
     {
         pointtext.text = ("Points: " + points);
+        
     }
 }

@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\attacktrigger.cs" />
     <Compile Include="Assets\Scripts\box.cs" />
     <Compile Include="Assets\Scripts\CameraFollowCameraFollow.cs" />
+    <Compile Include="Assets\Scripts\endUI1.cs" />
     <Compile Include="Assets\Scripts\enemy.cs" />
     <Compile Include="Assets\Scripts\Fallingflat.cs" />
     <Compile Include="Assets\Scripts\gamemaster.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\playerattack.cs" />
     <Compile Include="Assets\Scripts\scroll.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
+    <Compile Include="Assets\Scripts\startUI.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Khoa/Desktop/test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
