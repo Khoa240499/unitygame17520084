@@ -15,12 +15,14 @@ public class Player : MonoBehaviour
     public Animator anim;
     public float h = 0;
     public bool jump = false;
+    public gamemaster gm;
 
     // Use this for initialization
     void Start()
     {
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+        gm = GameObject.FindGameObjectWithTag("gamemaster").GetComponent<gamemaster>();
         ourHealth = maxhealth;
     }
 
@@ -30,25 +32,25 @@ public class Player : MonoBehaviour
         anim.SetBool("grounded", grounded);
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    if (grounded)
-        //    {
-        //        grounded = false;
-        //        doublejump = true;
-        //        r2.AddForce(Vector2.up * jumpPow);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (grounded)
+            {
+                grounded = false;
+                doublejump = true;
+                r2.AddForce(Vector2.up * jumpPow);
 
-        //    }
-        //    else
-        //    {
-        //        if (doublejump)
-        //        {
-        //            doublejump = false;
-        //            r2.velocity = new Vector2(r2.velocity.x, 0);
-        //            r2.AddForce(Vector2.up * jumpPow*0.7f);
-        //        }
-        //    }
-        //}
+            }
+            else
+            {
+                if (doublejump)
+                {
+                    doublejump = false;
+                    r2.velocity = new Vector2(r2.velocity.x, 0);
+                    r2.AddForce(Vector2.up * jumpPow * 0.7f);
+                }
+            }
+        }
         if (jump == true)
         {
             if (grounded)
@@ -88,9 +90,9 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Move(h);
+        //Move(h);
 
-        //float h = Input.GetAxis("Horizontal");
+        float h = Input.GetAxis("Horizontal");
         r2.AddForce((Vector2.right) * speed * h);
 
         if (r2.velocity.x > maxspeed)
@@ -154,5 +156,13 @@ public class Player : MonoBehaviour
               r2.AddForce(new Vector2(Knockdir.x * -50, Knockdir.y * 50));
         else
             r2.AddForce(new Vector2(Knockdir.x * 50, Knockdir.y * 50));
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Coin"))
+        {
+            Destroy(col.gameObject);
+            gm.points += 1;
+        }
     }
 }
