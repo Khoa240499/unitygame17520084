@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Movingplat
   - Movingup
+  - Coin
+  - gamemaster
+  - end
   layers:
   - Default
   - TransparentFX
